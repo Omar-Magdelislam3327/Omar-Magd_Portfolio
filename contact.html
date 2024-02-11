@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/aos/aos.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2D2B36;
+            margin: 0;
+            
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            width:400px;
+            background: linear-gradient(#212121, #212121) padding-box,
+            linear-gradient(145deg, transparent 35%, #D9FA02, yellow) border-box;
+            border: 2px solid transparent;
+            padding: 32px 24px;
+            font-size: 14px;
+            font-family: inherit;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-sizing: border-box;
+            border-radius: 16px;
+            background-size: 200% 100%;
+            animation: gradient 5s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .form-container button:active {
+            scale: 0.95;
+        }
+
+        .form-container .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-container .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            
+        }
+
+        .form-container .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #717171;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .form-container .form-group input {
+            width: 90%;
+            margin: auto;
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: #fff;
+            font-family: inherit;
+            background-color: transparent;
+            border: 1px solid #414141;
+            transition: 0.5s all;
+        }
+
+        .form-container .form-group textarea {
+            width: 90%;
+            margin: auto;
+            padding: 12px 10px;
+            border-radius: 8px;
+            resize: none;
+            color: #fff;
+            height: 96px;
+            border: 1px solid #414141;
+            background-color: transparent;
+            font-family: inherit;
+            transition: 0.5s all;
+        }
+
+        .form-container .form-group input::placeholder {
+            opacity: 0.5;
+        }
+
+        .form-container .form-group input:focus {
+            outline: none;
+            border-color: #D9FA02;
+        }
+
+        .form-container .form-group textarea:focus {
+            outline: none;
+            border-color: #D9FA02;
+        }
+
+        .form-container .form-submit-btn {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            align-self: flex-start;
+            font-family: inherit;
+            color: #717171;
+            font-weight: 600;
+            width: 40%;
+            background: #313131;
+            border: 1px solid #414141;
+            padding: 12px 16px;
+            font-size: inherit;
+            gap: 8px;
+            margin-top: 8px;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: 0.5s all;
+        }
+
+        .form-container .form-submit-btn:hover {
+            background-color: #D9FA02;
+            color: #212121;
+            border-color: #212121;
+        }
+        .activ{
+            color: #D9FA02 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bolder" href="index.html">Omar M Islam</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="index.html">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3 activ" href="contact.html">Contact Me</a>
+                    </li>
+                </ul>
+
+                <button class="btn-nav d-none d-lg-block" data-text="Awesome">
+                    <span class="actual-text">&nbsp;cv&nbsp;</span>
+                    <span aria-hidden="true" class="hover-text">&nbsp;cv&nbsp;</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="form-container">
+            <form class="form">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input required="" name="name" id="name" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email *</label>
+                    <input required="" name="email" id="email" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="textarea">How Can I Help You?</label>
+                    <textarea required="" cols="50" rows="10" id="textarea" name="textarea"></textarea>
+                </div>
+                <button type="submit" class="form-submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <script src="assets/vendors/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/vendors/aos/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
